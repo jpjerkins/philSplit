@@ -1,0 +1,89 @@
+units:
+  kx: cx
+  ky: cy
+  px: cx + 2
+  py: cy + 2
+  pinkysplay: 10
+points:
+  zones:
+    matrix:
+      key:
+        padding: ky
+        spread: kx
+      anchor:
+        rotate: pinkysplay
+      columns:
+        pinky:
+        ring:
+          key.splay: -pinkysplay
+          key.origin: [-12, -19]
+          key.stagger: 12
+        middle:
+          key.stagger: 7
+        index:
+          key.stagger: -4
+        inner:
+          key.stagger: -2
+      rows:
+        bottom:
+        home:
+        top:
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-21, -19]
+      columns:
+        outer:
+        home:
+          key.spread: 21.25
+          key.splay: -10
+          key.origin: [-11.75, -9]
+        inner:
+          key.spread: 21.25
+          key.splay: -10
+          key.stagger: py*0.3
+          key.height: py*1.5
+          key.origin: [-9.5, -9]
+      rows:
+        thumb:
+  rotate: -30
+  mirror:
+    ref: matrix_inner_top
+    distance: 60
+outlines:
+  caps:
+    - what: rectangle
+      where: true
+      size: [kx, ky]
+  capposts:
+    - what: rectangle
+      where: true
+      size: [7, 3]
+  printborder:
+    - what: polygon
+      operation: stack
+      points:
+      - ref: matrix_pinky_top
+        shift: [-30-0.5kx,30+0.5ky]
+      - ref: matrix_ring_top
+        shift: [0,30+0.5ky]
+      - ref: mirror_matrix_ring_top
+        shift: [0,30+0.5ky]
+      - ref: mirror_matrix_pinky_top
+        shift: [-30-0.5kx,30+0.5ky]
+      - ref: mirror_matrix_pinky_bottom
+        shift: [-30-0.5kx,-30-0.5ky]
+      - ref: mirror_thumbfan_outer_thumb
+        shift: [0,-30-0.5ky]
+      - ref: mirror_thumbfan_inner_thumb
+        shift: [0,-30-0.5ky]
+      - ref: thumbfan_inner_thumb
+        shift: [0,-30-0.5ky]
+      - ref: thumbfan_outer_thumb
+        shift: [0,-30-0.5ky]
+      - ref: matrix_pinky_bottom
+        shift: [-30-0.5kx,-30-0.5ky]
+  printableposts:
+    - name: printborder
+    - operation: subtract
+      name: capposts
