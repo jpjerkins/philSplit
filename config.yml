@@ -86,4 +86,6 @@ outlines:
   printableposts:
     - name: printborder
     - operation: subtract
+      name: caps
+    - operation: add
       name: capposts
