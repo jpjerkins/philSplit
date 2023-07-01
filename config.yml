@@ -69,25 +69,25 @@ outlines:
       operation: stack
       points:
       - ref: matrix_pinky_top
-        shift: [-0.5kx,0.5ky]
+        shift: [-1-0.5kx,1+0.5ky]
       - ref: matrix_ring_top
-        shift: [-0.5kx,0.5ky]
+        shift: [-0.5kx,1+0.5ky]
       - ref: mirror_matrix_ring_top
-        shift: [-0.5kx,0.5ky]
+        shift: [-0.5kx,1+0.5ky]
       - ref: mirror_matrix_pinky_top
-        shift: [-0.5kx,0.5ky]
+        shift: [-1-0.5kx,1+0.5ky]
       - ref: mirror_matrix_pinky_bottom
-        shift: [-0.5kx,-0.5ky]
+        shift: [-1-0.5kx,-1-0.5ky]
       - ref: mirror_thumbfan_outer_thumb
-        shift: [-0.5kx,-0.5ky]
+        shift: [-0.5kx,-1-0.5ky]
       - ref: mirror_thumbfan_inner_thumb
-        shift: [0.5kx,-0.5ky]
+        shift: [0.5kx,-1-0.5ky]
       - ref: thumbfan_inner_thumb
-        shift: [0.5kx,-0.5ky]
+        shift: [0.5kx,-1-0.5ky]
       - ref: thumbfan_outer_thumb
-        shift: [-0.5kx,-0.5ky]
+        shift: [-0.5kx,-1-0.5ky]
       - ref: matrix_pinky_bottom
-        shift: [-0.5kx,-0.5ky]
+        shift: [-1-0.5kx,-1-0.5ky]
   printableposts:
     - name: printborder
     - operation: subtract
