@@ -23,9 +23,9 @@ points:
         middle:
           key.stagger: 7
         index:
-          key.stagger: -4
-        inner:
           key.stagger: -2
+        inner:
+          key.stagger: 0
       rows:
         bottom:
         home:
@@ -36,7 +36,7 @@ points:
         width: kx
       anchor:
         ref: matrix_inner_bottom
-        shift: [-21, -19]
+        shift: [-15, -18]
       columns:
         outer:
         home:
@@ -51,7 +51,7 @@ points:
           key.origin: [-9.5, -9]
       rows:
         thumb:
-  rotate: -30
+  rotate: -25
   mirror:
     ref: matrix_inner_top
     distance: 60
