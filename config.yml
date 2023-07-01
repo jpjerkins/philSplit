@@ -31,6 +31,9 @@ points:
         home:
         top:
     thumbfan:
+      key:
+        height: ky
+        width: kx
       anchor:
         ref: matrix_inner_bottom
         shift: [-21, -19]
