@@ -10,6 +10,8 @@ points:
       key:
         padding: ky
         spread: kx
+        height: ky
+        width: kx
       anchor:
         rotate: pinkysplay
       columns:
