@@ -17,20 +17,32 @@ points:
         shift: [100, -100]
       columns:
         pinky:
+          key.column_net: P14
         ring:
-          key.splay: -pinkysplay
-          key.origin: [-12, -19]
-          key.stagger: 12
+          key:
+            splay: -pinkysplay
+            origin: [-12, -19]
+            stagger: 12
+            column_net: P7
         middle:
-          key.stagger: 7
+          key:
+            stagger: 7
+            column_net: P8
         index:
-          key.stagger: -2
+          key:
+            stagger: -2
+            column_net: P9
         inner:
-          key.stagger: 0
+          key:
+            stagger: 0
+            column_net: P16
       rows:
         bottom:
+          row_net: P15
         home:
+          row_net: P18
         top:
+          row_net: P19
     thumbfan:
       key:
         height: ky
@@ -101,16 +113,6 @@ pcbs:
       main:
         outline: printborder
     footprints:
-      choc:
-        what: choc
-        where: true
-        adjust:
-          rotate: 180
-        params:
-          keycaps: true
-          reverse: true
-          from: "{{column_net}}"
-          to: "{{colrow}}"
       choc_hotswap:
         what: choc
         where: true
@@ -120,6 +122,13 @@ pcbs:
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
+      viacol:
+        what: via
+        where: true
+        params:
+          net: "{{column_net}}"
+        adjust:
+          shift: [0, -4]
       diode:
         what: diode
         where: true
@@ -127,4 +136,4 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -5]
+          shift: [0, -7]
