@@ -90,9 +90,9 @@ outlines:
       - ref: matrix_middle_top
         shift: [0.5kx,1+0.5ky]
       - ref: matrix_inner_top
-        shift: [1+1.5kx,1+0.5ky]
+        shift: [1+1.5px,2+0.5ky]
       - ref: matrix_inner_bottom
-        shift: [1+1.5kx,1+0.5ky]
+        shift: [1+1.5px,1+0.5ky]
       - ref: thumbfan_inner_thumb
         shift: [1+0.5kx,1+0.75ky]
       - ref: thumbfan_inner_thumb
@@ -137,3 +137,21 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [0, -7]
+      promicro:
+        what: promicro_pretty
+        where:
+          ref: matrix_inner_top
+          shift: [1px,-0.5kx]
+          rotate: -90
+      trrs:
+        what: trrs
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.5px,0]
+          rotate: -90
+        params:
+          reverse: true
+          A: VCC
+          B: GND
+          C: P0
+          D: P1
