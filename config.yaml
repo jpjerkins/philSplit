@@ -64,7 +64,7 @@ points:
           key.origin: [-9.5, -9]
       rows:
         thumb:
-  rotate: -25
+#  rotate: -25
 #  mirror:
 #    ref: matrix_inner_top
 #    distance: 60
