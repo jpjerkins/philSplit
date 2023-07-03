@@ -152,6 +152,23 @@ pcbs:
       #   params:
       #     SDA: P2
       #     SCL: P3
+      reset:
+        what: button
+        where:
+          ref: matrix_inner_bottom
+          shift: [18,-7]
+        params:
+          from: RST
+          to: GND
+      power:
+        what: slider
+        where:
+          ref: matrix_inner_bottom
+          shift: [38,-5]
+          rotate: -55
+        params:
+          from: ""
+          to: ""
       trrs:
         what: trrs
         where:
