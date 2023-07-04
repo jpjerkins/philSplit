@@ -152,7 +152,7 @@ pcbs:
       #   params:
       #     SDA: P2
       #     SCL: P3
-      reset:
+      reset_f:
         what: button
         where:
           ref: matrix_inner_bottom
@@ -160,25 +160,68 @@ pcbs:
         params:
           from: RST
           to: GND
-      power:
+          side: F
+      reset_b:
+        what: button
+        where:
+          ref: matrix_inner_bottom
+          shift: [18,-7]
+        params:
+          from: RST
+          to: GND
+          side: B
+      power_f:
         what: slider
         where:
           ref: matrix_inner_bottom
-          shift: [38,-5]
+          shift: [35,-1]
           rotate: -55
         params:
-          from: ""
-          to: ""
+          from: battvcc
+          to: RAW
+          side: F
+      power_b:
+        what: slider
+        where:
+          ref: matrix_inner_bottom
+          shift: [35,-1]
+          rotate: -55
+        params:
+          from: battvcc
+          to: RAW
+          side: B
       trrs:
         what: trrs
         where:
           ref: matrix_inner_bottom
-          shift: [1.5px,0]
+          shift: [-2+1.5px,3]
           rotate: -90
         params:
           reverse: true
           symmetric: true
-          A: VCC
-          B: VCC
+          A: RAW
+          B: RAW
           C: GND
           D: P3
+      batt_vcc:
+        what: pad
+        where:
+          ref: matrix_inner_bottom
+          shift: [13,0]
+        params:
+          width: 2
+          height: 2
+          front: true
+          back: true
+          net: battvcc
+      batt_gnd:
+        what: pad
+        where:
+          ref: matrix_inner_bottom
+          shift: [17,0]
+        params:
+          width: 2
+          height: 2
+          front: true
+          back: true
+          net: GND
