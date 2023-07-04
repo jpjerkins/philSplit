@@ -3,7 +3,8 @@ units:
   ky: cy
   px: cx + 2
   py: cy + 2
-  pinkysplay: 10
+  pinkysplay: 0
+  ringsplay: 0
 points:
   zones:
     matrix:
@@ -13,7 +14,7 @@ points:
         height: ky
         width: kx
       anchor:
-        rotate: pinkysplay
+        rotate: pinkysplay+ringsplay
         shift: [100, -100]
       columns:
         pinky:
@@ -26,6 +27,7 @@ points:
             column_net: P7
         middle:
           key:
+            splay: -ringsplay
             stagger: 7
             column_net: P8
         index:
