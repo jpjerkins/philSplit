@@ -50,20 +50,21 @@ points:
         height: ky
         width: kx
       anchor:
-        ref: matrix_inner_bottom
-        shift: [-15, -18]
+        ref: matrix_index_bottom
+        shift: [0, -18]
       columns:
         outer:
         home:
           key.spread: 21.25
           key.splay: -10
-          key.origin: [-11.75, -9]
+          key.origin: [-11, 0]
         inner:
           key.spread: 21.25
           key.splay: -10
           key.stagger: py*0.3
-          key.height: py*1.5
+          key.width: px*1.5
           key.origin: [-9.5, -9]
+          key.rotate: 90
       rows:
         thumb:
 #  rotate: -25
@@ -96,9 +97,9 @@ outlines:
       - ref: matrix_inner_bottom
         shift: [1+1.5px,1+0.5ky]
       - ref: thumbfan_inner_thumb
-        shift: [1+0.5kx,1+0.75ky]
+        shift: [1+0.75kx,-1-0.5ky]
       - ref: thumbfan_inner_thumb
-        shift: [1+0.5kx,-1-0.75ky]
+        shift: [-1-0.75kx,-1-0.5ky]
       - ref: thumbfan_outer_thumb
         shift: [-0.5kx,-1-0.5ky]
       - ref: matrix_pinky_bottom
@@ -158,7 +159,7 @@ pcbs:
         what: button
         where:
           ref: matrix_inner_bottom
-          shift: [18,-7]
+          shift: [15,-7]
         params:
           from: RST
           to: GND
@@ -167,7 +168,7 @@ pcbs:
         what: button
         where:
           ref: matrix_inner_bottom
-          shift: [18,-7]
+          shift: [15,-7]
         params:
           from: RST
           to: GND
@@ -176,8 +177,8 @@ pcbs:
         what: slider
         where:
           ref: matrix_inner_bottom
-          shift: [35,-1]
-          rotate: -55
+          shift: [33,-1]
+          rotate: -65
         params:
           from: battvcc
           to: RAW
@@ -186,8 +187,8 @@ pcbs:
         what: slider
         where:
           ref: matrix_inner_bottom
-          shift: [35,-1]
-          rotate: -55
+          shift: [33,-1]
+          rotate: -65
         params:
           from: battvcc
           to: RAW
