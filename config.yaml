@@ -28,15 +28,15 @@ points:
         middle:
           key:
             splay: -ringsplay
-            stagger: 7
+            stagger: 6
             column_net: P8
         index:
           key:
-            stagger: -2
+            stagger: -6
             column_net: P9
         inner:
           key:
-            stagger: 0
+            stagger: -2
             column_net: P16
       rows:
         bottom:
@@ -51,7 +51,7 @@ points:
         width: kx
       anchor:
         ref: matrix_index_bottom
-        shift: [0, -18]
+        shift: [-4, -22]
       columns:
         outer:
         home:
